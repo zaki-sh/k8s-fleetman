@@ -41,4 +41,6 @@ kops update cluster --yes
 ```
 
 #### Delete kops cluster
-`kops delete cluster --name ${NAME} --yes`
+```bash
+kops delete cluster --name ${NAME} --yes
+```
