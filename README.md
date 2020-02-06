@@ -12,14 +12,14 @@ Practice kubernetes project
 3. Run `aws configure` again and setup access keys created for `kops` aws iam user.
 4. [Cluster State storage](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#cluster-state-storage) 
 5. [Creating your first cluster](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#creating-your-first-cluster) :arrow_heading_down:
-##### Prepare local environment
+#### Prepare local environment
   ```bash
   export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
   export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key)
   export NAME=fleetman.k8s.local
   export KOPS_STATE_STORE=s3://<s3 bucket name will go here>
   ```
-##### Create and edit cluster configuration
+#### Create and edit cluster configuration
   If creating cluster from a new machine, first create ssh keys to be used by kops.
   ```bash
   ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa
@@ -34,11 +34,11 @@ Practice kubernetes project
     maxSize: 5
     minSize: 3
   ```
-##### Build the Cluster
+#### Build the Cluster
 This command will create cluster resources in aws.
 ```bash
 kops update cluster --yes
 ```
 
-##### Delete kops cluster
+#### Delete kops cluster
 `kops delete cluster --name ${NAME} --yes`
