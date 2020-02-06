@@ -11,8 +11,7 @@ Practice kubernetes project
 2. [Setup `kops` IAM user](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#setup-iam-user)
 3. Run `aws configure` again and setup access keys created for `kops` aws iam user.
 4. [Cluster State storage](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#cluster-state-storage) 
-5. [Creating your first cluster](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#creating-your-first-cluster) <!-- svg jekyll helper -->
-{% octicon arrow-down %}
+5. [Creating your first cluster](https://github.com/kubernetes/kops/blob/master/docs/getting_started/aws.md#creating-your-first-cluster) :arrow_heading_down:
 ##### Prepare local environment
   ```bash
   export AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id)
