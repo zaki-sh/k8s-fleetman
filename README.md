@@ -39,13 +39,13 @@ This command will create cluster resources in aws.
 ```bash
 kops update cluster --yes
 ```
-#### Delete kops cluster
-```bash
-kops delete cluster --name ${NAME} --yes
-```
 #### After cluster is ready
 Once `kops validate cluster` shows that the cluster resources are ready we can now deploy k8s objects.
 ```bash
 kubectl apply -f .
 ```
 this will deploy the kubernetes objects defined in the yaml files, i.e fleetman web app.
+#### Delete kops cluster
+```bash
+kops delete cluster --name ${NAME} --yes
+```
