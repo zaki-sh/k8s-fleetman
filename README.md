@@ -19,7 +19,7 @@ Practice kubernetes project
   export NAME=fleetman.k8s.local
   export KOPS_STATE_STORE=s3://<s3 bucket name will go here>
   ```
-##### Create cluster configuration
+##### Create and edit cluster configuration
   If creating cluster from a new machine, first create ssh keys to be used by kops.
   ```bash
   ssh-keygen -b 2048 -t rsa -f ~/.ssh/id_rsa
@@ -33,6 +33,12 @@ Practice kubernetes project
     change following:
     maxSize: 5
     minSize: 3
-  kops update cluster --yes
-    This command will create cluster resources in aws.
   ```
+##### Build the Cluster
+This command will create cluster resources in aws.
+```bash
+kops update cluster --yes
+```
+
+##### Delete kops cluster
+`kops delete cluster --name ${NAME} --yes`
